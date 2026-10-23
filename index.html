@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Chi-Cafe — Regt an. Nicht auf. (Designkonzept)</title>
+  <meta name="description" content="Designkonzept für chi-cafe.de – unverbindlicher Entwurf, keine offizielle Website.">
+  <meta name="theme-color" content="#F5EFE6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235B3A29'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='%23F5EFE6' font-family='serif'%3E%E6%B0%A3%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,0..100;1,9..144,300..500,0..100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&text=%E6%B0%A3&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Intro: steam condenses into 氣 -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <svg class="intro__svg" viewBox="0 0 400 400">
+      <defs>
+        <filter id="steam" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence id="steamNoise" type="fractalNoise" baseFrequency="0.012 0.035" numOctaves="2" seed="7" />
+          <feDisplacementMap id="steamMap" in="SourceGraphic" scale="90" xChannelSelector="R" yChannelSelector="G" />
+          <feGaussianBlur id="steamBlur" stdDeviation="10" />
+        </filter>
+      </defs>
+      <text x="200" y="262" text-anchor="middle" class="intro__glyph" filter="url(#steam)">氣</text>
+    </svg>
+    <p class="intro__caption"><span>Chi</span> · <span data-en="life energy">Lebensenergie</span></p>
+  </div>
+
+  <div class="concept-bar">
+    <span data-en="Design concept for chi-cafe.de · Draft by Kamran Alavi · Not the official website">Designkonzept für chi-cafe.de · Entwurf von Kamran Alavi · Keine offizielle Website</span>
+    <a href="system.html" data-en="View design system →">Designsystem ansehen →</a>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="logo" href="#top" aria-label="Chi-Cafe Startseite">
+        <span class="logo__glyph" aria-hidden="true">氣</span>
+        <span class="logo__word">Chi-Cafe</span>
+      </a>
+      <nav class="nav__links" aria-label="Hauptnavigation">
+        <a href="#warum" data-en="Why">Warum</a>
+        <a href="#wirkung" data-en="How it works">Wirkung</a>
+        <a href="#sorten" data-en="Blends">Sorten</a>
+        <a href="#gutes" data-en="Doing good">Gutes tun</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang" role="group" aria-label="Sprache">
+          <button type="button" data-lang="de" aria-pressed="true">DE</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn--small btn--dark nav__shop" href="#probieren">Shop</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="menu" id="menu" hidden>
+      <a href="#warum" data-en="Why">Warum</a>
+      <a href="#wirkung" data-en="How it works">Wirkung</a>
+      <a href="#sorten" data-en="Blends">Sorten</a>
+      <a href="#gutes" data-en="Doing good">Gutes tun</a>
+      <a href="#probieren" data-en="Shop">Shop</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1677846092922-5b685ba0afb2?auto=format&fit=crop&w=1800&q=80"
+             srcset="https://images.unsplash.com/photo-1677846092922-5b685ba0afb2?auto=format&fit=crop&w=900&q=75 900w,
+                     https://images.unsplash.com/photo-1677846092922-5b685ba0afb2?auto=format&fit=crop&w=1800&q=80 1800w,
+                     https://images.unsplash.com/photo-1677846092922-5b685ba0afb2?auto=format&fit=crop&w=2600&q=80 2600w"
+             sizes="100vw" alt="Dampfende Tasse im Morgenlicht" fetchpriority="high">
+      </div>
+      <div class="hero__content wrap">
+        <p class="eyebrow eyebrow--light" data-en="Chi means life energy">Chi bedeutet Lebensenergie</p>
+        <h1 class="hero__title">
+          <span class="line" data-en="Energises.">Regt an.</span>
+          <em class="line" data-en="Never agitates.">Nicht auf.</em>
+        </h1>
+        <p class="hero__lead" data-en="Coffee with reishi, ginseng and guarana – for energy that arrives gently and stays.<sup>2</sup>">Kaffeegenuss mit Reishi, Ginseng und Guarana – für Energie, die sanft kommt und bleibt.<sup>2</sup></p>
+        <div class="hero__cta">
+          <a class="btn btn--light" href="#sorten" data-en="Discover the blends">Sorten entdecken</a>
+          <a class="btn btn--ghost-light" href="#probieren" data-en="Sampler · €3.75">Probierpaket · 3,75 €</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#warum" data-en="Breathe out – and keep scrolling">Atmen Sie aus – und scrollen Sie weiter</a>
+    </section>
+
+    <!-- 01 WHY -->
+    <section class="why section" id="warum">
+      <div class="wrap why__grid">
+        <p class="eyebrow reveal"><span class="eyebrow__num">01</span> <span data-en="Why we exist">Warum es uns gibt</span></p>
+        <h2 class="why__statement reveal" data-en="We believe enjoyment should <em>do you good.</em>">Wir glauben, dass Genuss <em>guttun</em> sollte.</h2>
+        <div class="why__body reveal">
+          <p data-en="For many of us, the first cup of the day is a small ritual. Suzanne and Ludwig Jacob believe nobody should have to choose between that ritual and their wellbeing.">Für viele von uns ist die erste Tasse am Tag ein kleines Ritual. Suzanne und Ludwig Jacob finden: Niemand sollte sich zwischen diesem Ritual und dem eigenen Wohlbefinden entscheiden müssen.</p>
+          <p data-en="So they created Chi-Cafe: full-bodied coffee, joined with valuable plants from a tradition thousands of years old.">Also haben sie Chi-Cafe erfunden: vollmundigen Kaffee, verbunden mit wertvollen Pflanzen aus jahrtausendealter Tradition.</p>
+          <p class="signature">Suzanne &amp; Ludwig Jacob<span data-en="Inventors of Chi-Cafe">Chi-Cafe-Erfinder</span></p>
+        </div>
+        <figure class="why__figure reveal">
+          <img src="https://images.unsplash.com/photo-1550731358-491ded4af838?auto=format&fit=crop&w=1200&q=80" alt="Zwei Hände halten eine Tasse Milchkaffee" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 02 HOW -->
+    <section class="how section" id="wirkung">
+      <div class="wrap">
+        <p class="eyebrow reveal"><span class="eyebrow__num">02</span> <span data-en="How it works">Wie es wirkt</span></p>
+        <h2 class="h2 reveal" data-en="Energy that <em>feels good.</em>">Energie, die sich <em>gut anfühlt.</em></h2>
+
+        <div class="curve reveal" id="curve">
+          <svg viewBox="0 0 800 300" role="img" aria-labelledby="curveTitle">
+            <title id="curveTitle">Schematische Darstellung: klassischer Kaffee steigt steil an und fällt ab, Chi-Cafe steigt sanft und hält länger.</title>
+            <line class="curve__axis" x1="40" y1="260" x2="780" y2="260" />
+            <path class="curve__path curve__path--classic" pathLength="1"
+                  d="M40 250 C 110 250, 140 40, 200 50 S 270 230, 340 240 S 470 250, 780 252" />
+            <path class="curve__path curve__path--chi" pathLength="1"
+                  d="M40 250 C 160 248, 220 120, 330 110 S 560 112, 640 150 S 740 225, 780 236" />
+            <g class="curve__labels">
+              <text x="214" y="34" class="curve__label curve__label--classic" data-en="Classic coffee">Klassischer Kaffee</text>
+              <text x="420" y="96" class="curve__label curve__label--chi">Chi-Cafe</text>
+              <text x="40" y="288" class="curve__tick" data-en="first sip">erster Schluck</text>
+              <text x="780" y="288" class="curve__tick" text-anchor="end" data-en="hours later">Stunden später</text>
+            </g>
+          </svg>
+          <p class="curve__note" data-en="Schematic illustration. The caffeine from coffee and guarana is released more slowly and has a gentler, longer effect.<sup>2</sup>">Schematische Darstellung. Das Koffein aus Kaffee und Guarana wird langsamer freigesetzt und wirkt sanfter und länger.<sup>2</sup></p>
+        </div>
+
+        <div class="pillars">
+          <article class="pillar reveal">
+            <span class="pillar__num">i</span>
+            <h3 data-en="Gentle, not jumpy">Sanft statt sprunghaft</h3>
+            <p data-en="Caffeine from coffee and the tropical guarana fruit – released slowly, for a gentle, lasting lift.<sup>2</sup>">Koffein aus Kaffee und der tropischen Guarana-Frucht – langsam freigesetzt, für eine sanfte, längere Wirkung.<sup>2</sup></p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__num">ii</span>
+            <h3 data-en="A good gut feeling">Ein gutes Bauchgefühl</h3>
+            <p data-en="In Asia, the belly – “Hara” – is the source of Chi. Acacia fibre with natural calcium supports a good gut feeling.<sup>3</sup>">In Asien gilt der Bauch – „Hara“ – als Quelle des Chi. Akazienfaser mit natürlichem Calcium sorgt für ein gutes Bauchgefühl.<sup>3</sup></p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__num">iii</span>
+            <h3 data-en="Natural balance">Natürliche Balance</h3>
+            <p data-en="Reishi mushroom, ginseng and pomegranate help your life energy unfold.<sup>1</sup>">Reishi-Pilz, Ginseng und Granatapfel fördern die Entfaltung der Lebenskraft.<sup>1</sup></p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__num">iv</span>
+            <h3 data-en="Only what's good">Nur, was guttut</h3>
+            <p data-en="No added sugar. No gluten. No lactose. Instead: valuable minerals.">Ohne Zuckerzusatz. Ohne Gluten. Ohne Laktose. Dafür mit wertvollen Mineralstoffen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INGREDIENTS (sticky story) -->
+    <section class="ingredients section" aria-labelledby="ingTitle">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="ingTitle" data-en="What's in <em>every cup.</em>">Was in <em>jeder Tasse</em> steckt.</h2>
+      </div>
+      <div class="wrap ingredients__grid">
+        <div class="ingredients__media" aria-hidden="true">
+          <div class="ingredients__frame">
+            <img class="is-active" data-ing="0" src="https://images.unsplash.com/photo-1782723568150-184e79233fed?auto=format&fit=crop&w=1100&q=80" alt="" loading="lazy">
+            <img data-ing="1" src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&w=1100&q=80" alt="" loading="lazy">
+            <img data-ing="2" src="https://images.unsplash.com/photo-1695798790639-c3c4294373ab?auto=format&fit=crop&w=1100&q=80" alt="" loading="lazy">
+            <img data-ing="3" src="https://images.unsplash.com/photo-1654648742474-7f22ca616d0b?auto=format&fit=crop&w=1100&q=80" alt="" loading="lazy">
+            <img data-ing="4" src="https://images.unsplash.com/photo-1673208126879-18094b40d9cf?auto=format&fit=crop&w=1100&q=80" alt="" loading="lazy">
+          </div>
+        </div>
+        <ol class="ingredients__list">
+          <li class="ing" data-ing="0">
+            <img class="ing__thumb" src="https://images.unsplash.com/photo-1782723568150-184e79233fed?auto=format&fit=crop&w=700&q=75" alt="Reishi-Pilz an einem Ast" loading="lazy">
+            <span class="ing__latin">Ganoderma lucidum</span>
+            <h3 data-en="Reishi mushroom">Reishi-Pilz</h3>
+            <p data-en="Revered in Asia for thousands of years. Its delicately bitter aroma is the heart of ReiChi.">In Asien seit Jahrtausenden verehrt. Sein zartherbes Aroma ist das Herz von ReiChi.</p>
+          </li>
+          <li class="ing" data-ing="1">
+            <img class="ing__thumb" src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&w=700&q=75" alt="Geröstete Kaffeebohnen in einer Schale" loading="lazy">
+            <span class="ing__latin">Coffea · Paullinia cupana</span>
+            <h3 data-en="Coffee &amp; guarana">Kaffee &amp; Guarana</h3>
+            <p data-en="Gently roasted Arabica and Robusta beans, joined by the tropical guarana fruit.">Schonend geröstete Arabica- und Robusta-Bohnen, ergänzt durch die tropische Guarana-Frucht.</p>
+          </li>
+          <li class="ing" data-ing="2">
+            <img class="ing__thumb" src="https://images.unsplash.com/photo-1695798790639-c3c4294373ab?auto=format&fit=crop&w=700&q=75" alt="Ginsengwurzel auf Moos" loading="lazy">
+            <span class="ing__latin">Panax ginseng</span>
+            <h3>Ginseng</h3>
+            <p data-en="One of the best-known roots in Asian plant lore.">Eine der bekanntesten Wurzeln der asiatischen Pflanzenkunde.</p>
+          </li>
+          <li class="ing" data-ing="3">
+            <img class="ing__thumb" src="https://images.unsplash.com/photo-1654648742474-7f22ca616d0b?auto=format&fit=crop&w=700&q=75" alt="Granatapfelkerne" loading="lazy">
+            <span class="ing__latin">Punica granatum</span>
+            <h3 data-en="Pomegranate">Granatapfel</h3>
+            <p data-en="Brings valuable polyphenols into your cup.">Bringt wertvolle Polyphenole in Ihre Tasse.</p>
+          </li>
+          <li class="ing" data-ing="4">
+            <img class="ing__thumb" src="https://images.unsplash.com/photo-1673208126879-18094b40d9cf?auto=format&fit=crop&w=700&q=75" alt="Getrocknete Pflanzenfasern" loading="lazy">
+            <span class="ing__latin">Acacia senegal</span>
+            <h3 data-en="Acacia fibre">Akazienfaser</h3>
+            <p data-en="Soluble fibre with natural calcium – the thing our diet most often lacks.">Lösliche Ballaststoffe mit natürlichem Calcium – genau das, was in unserer Ernährung meist zu kurz kommt.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 03 WHAT -->
+    <section class="what section" id="sorten">
+      <div class="wrap">
+        <p class="eyebrow reveal"><span class="eyebrow__num">03</span> <span data-en="What we make">Was wir machen</span></p>
+        <h2 class="h2 reveal" data-en="Find your <em>Chi character.</em>">Finden Sie Ihren <em class="nowrap">Chi-Charakter.</em></h2>
+
+        <div class="finder reveal" id="finder">
+          <div class="finder__step" data-step="1">
+            <p class="finder__q" data-en="When is your Chi moment?">Wann ist Ihr Chi-Moment?</p>
+            <div class="chips">
+              <button type="button" class="chip" data-moment="morning" data-en="In the morning">Am Morgen</button>
+              <button type="button" class="chip" data-moment="afternoon" data-en="In the afternoon">Am Nachmittag</button>
+              <button type="button" class="chip" data-moment="evening" data-en="In the evening">Am Abend</button>
+            </div>
+          </div>
+          <div class="finder__step" data-step="2" hidden>
+            <p class="finder__q" data-en="How do you like it?">Wie mögen Sie es?</p>
+            <div class="chips">
+              <button type="button" class="chip" data-taste="exotic" data-en="Creamy &amp; exotic">Cremig &amp; exotisch</button>
+              <button type="button" class="chip" data-taste="mild" data-en="Mild with cocoa">Mild mit Kakao</button>
+              <button type="button" class="chip" data-taste="spiced" data-en="Spiced &amp; oriental">Würzig &amp; orientalisch</button>
+              <button type="button" class="chip" data-taste="chocolate" data-en="Chocolatey">Schokoladig</button>
+              <button type="button" class="chip" data-taste="nocoffee" data-en="No coffee at all">Ganz ohne Kaffee</button>
+            </div>
+          </div>
+          <div class="finder__result" hidden aria-live="polite">
+            <div class="finder__visual"><img class="finder__img" src="" alt=""></div>
+            <div>
+              <p class="finder__char"></p>
+              <p class="finder__name"></p>
+              <p class="finder__desc"></p>
+              <div class="finder__actions">
+                <a class="btn btn--dark" href="#probieren" data-en="Get to know it">Kennenlernen</a>
+                <button type="button" class="link-btn finder__reset" data-en="Start again">Neu starten</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rail-head reveal">
+          <p class="rail-head__title" data-en="All blends">Alle Sorten</p>
+          <div class="rail-head__arrows">
+            <button type="button" class="arrow" data-dir="-1" aria-label="Zurück">←</button>
+            <button type="button" class="arrow" data-dir="1" aria-label="Weiter">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="rail" id="rail" tabindex="0" aria-label="Alle Sorten">
+        <!-- Product cards are rendered from PRODUCTS in main.js -->
+      </div>
+    </section>
+
+    <!-- BREATH -->
+    <section class="breath" aria-labelledby="breathTitle">
+      <div class="wrap breath__grid">
+        <div>
+          <h2 class="h2 h2--light reveal" id="breathTitle" data-en="One cup. <em>One breath.</em>">Eine Tasse. <em>Ein Atemzug.</em></h2>
+          <p class="breath__text reveal" data-en="Before you read on: give yourself ten seconds. That is what Chi is about.">Bevor Sie weiterlesen: Schenken Sie sich zehn Sekunden. Genau darum geht es bei Chi.</p>
+          <button type="button" class="btn btn--light reveal" id="breathBtn" data-en="Breathe now">Jetzt atmen</button>
+        </div>
+        <div class="breath__orb" aria-live="polite">
+          <div class="orb" id="orb"><span class="orb__glyph" aria-hidden="true">氣</span></div>
+          <p class="orb__label" id="orbLabel">&nbsp;</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOING GOOD -->
+    <section class="good section" id="gutes">
+      <div class="wrap good__grid">
+        <figure class="good__figure reveal">
+          <img src="https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?auto=format&fit=crop&w=1400&q=80" alt="Dorf in den Bergen Nepals" loading="lazy">
+        </figure>
+        <div class="good__copy">
+          <p class="eyebrow reveal" data-en="Doing good">Gutes tun</p>
+          <h2 class="h2 reveal" data-en="Every tin <em>shares.</em>">Jede Dose <em>teilt.</em></h2>
+          <p class="reveal" data-en="With every Chi-Cafe you buy, you support plant-based school meals for children in Nepal – for their health and their education.">Mit jedem Chi-Cafe unterstützen Sie pflanzliche Schulmahlzeiten für Kinder in Nepal – für ihre Gesundheit und ihre Bildung.</p>
+          <p class="counter reveal"><span class="counter__num" id="counter" data-target="2000000">0</span><span class="counter__label" data-en="school meals so far">Schulmahlzeiten bisher</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICES -->
+    <section class="voices section" aria-labelledby="voicesTitle">
+      <div class="wrap">
+        <p class="eyebrow reveal" id="voicesTitle" data-en="Voices from the Chi-Cafe family">Stimmen aus der Chi-Cafe-Familie</p>
+        <div class="quotes reveal" id="quotes">
+          <blockquote class="quote is-active">
+            <p data-en="“I'm vegan and I love ReiChi mixed with a plant drink. B12 in my coffee is just perfect for me.”">„Ich bin Veganerin und liebe den ReiChi mit einem Pflanzendrink. B12 im Kaffee ist für mich einfach perfekt.“</p>
+            <cite>Julia E.</cite>
+          </blockquote>
+          <blockquote class="quote">
+            <p data-en="“Because of my stressful job I drink a lot of coffee. ReiChi tastes of coconut and keeps me going much longer than ordinary coffee.”">„Wegen meines stressigen Jobs trinke ich viel Kaffee. ReiChi schmeckt nach Kokos und hält mich viel länger fit als gewöhnlicher Kaffee.“</p>
+            <cite>Matthias H.</cite>
+          </blockquote>
+          <blockquote class="quote">
+            <p data-en="“I've been drinking Chi-Cafe balance for about three years. Without sugar, just a splash of plant milk.”">„Ich trinke seit etwa drei Jahren Chi-Cafe balance. Ohne Zucker, nur mit einem Schluck Pflanzenmilch.“</p>
+            <cite>Elke P.</cite>
+          </blockquote>
+          <div class="quotes__dots" role="tablist" aria-label="Kundenstimmen"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAMPLER CTA -->
+    <section class="sampler section" id="probieren">
+      <div class="wrap sampler__card reveal">
+        <div class="sampler__copy">
+          <p class="eyebrow" data-en="The easiest first step">Der einfachste erste Schritt</p>
+          <h2 class="h2" data-en="Not sure yet? <em>Try them all.</em>">Noch unsicher? <em>Probieren Sie alle.</em></h2>
+          <p data-en="Seven blends, one small journey of discovery. The sampler – with free shipping.">Sieben Sorten, eine kleine Entdeckungsreise. Das Probierpaket – versandkostenfrei.</p>
+          <div class="sampler__price">
+            <span class="price">3,75 €</span>
+            <a class="btn btn--dark" href="#probieren" data-en="Order the sampler">Probierpaket bestellen</a>
+          </div>
+          <p class="sampler__note" data-en="Also available at your pharmacy.">Auch in Ihrer Apotheke erhältlich.</p>
+        </div>
+        <div class="sampler__tins" aria-hidden="true">
+          <img src="https://chi-cafe.de/wp-content/uploads/sites/11/2024/07/09332927_Chi-Cafe_Balance_450g_240209_Hauptbild.jpg" alt="" loading="lazy">
+          <img src="https://chi-cafe.de/wp-content/uploads/sites/11/2024/07/13331460_ReiChi_400g_240213_Hauptbild.jpg" alt="" loading="lazy">
+          <img src="https://chi-cafe.de/wp-content/uploads/sites/11/2024/08/19059912_ReiChi_Zen_240619.jpg" alt="" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div>
+          <a class="logo logo--footer" href="#top"><span class="logo__glyph" aria-hidden="true">氣</span><span class="logo__word">Chi-Cafe</span></a>
+          <p class="footer__claim" data-en="Energises. Never agitates.">Regt an. Nicht auf.</p>
+        </div>
+        <nav class="footer__cols" aria-label="Fußzeile">
+          <div>
+            <p class="footer__h" data-en="Products">Produkte</p>
+            <a href="#sorten" data-en="All blends">Alle Sorten</a>
+            <a href="#probieren" data-en="Sampler">Probierpaket</a>
+            <a href="#sorten" data-en="Preparation">Zubereitung</a>
+          </div>
+          <div>
+            <p class="footer__h" data-en="Knowledge">Wissen</p>
+            <a href="#wirkung" data-en="Ingredients">Zutaten</a>
+            <a href="#warum" data-en="Why Chi-Cafe">Warum Chi-Cafe</a>
+            <a href="#top" data-en="Recipes">Rezepte</a>
+          </div>
+          <div>
+            <p class="footer__h">Service</p>
+            <a href="#top">FAQ</a>
+            <a href="#top" data-en="Privacy">Datenschutz</a>
+            <a href="#top" data-en="Legal notice">Impressum</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__notes">
+        <p data-en="<sup>1–4</sup> Footnotes and health-claim notes are carried over 1:1 from the current website.">
+          <sup>1–4</sup> Fußnoten und Hinweise zu gesundheitsbezogenen Angaben werden 1:1 von der bestehenden Website übernommen.</p>
+        <p data-en="Design concept – not the official Chi-Cafe website. Photos: Unsplash (placeholders); product images © Chi-Cafe.">Designkonzept – nicht die offizielle Chi-Cafe-Website. Fotos: Unsplash (Platzhalter); Produktbilder © Chi-Cafe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

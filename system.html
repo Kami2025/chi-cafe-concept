@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Chi-Cafe Design System (Concept)</title>
+  <meta name="theme-color" content="#F5EFE6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235B3A29'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='%23F5EFE6' font-family='serif'%3E%E6%B0%A3%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,0..100;1,9..144,300..500,0..100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&text=%E6%B0%A3&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .ds-head { padding-block: var(--s7) var(--s5); }
+    .ds-head h1 { font-size: clamp(3rem, 8vw, 6.5rem); margin-bottom: var(--s3); }
+    .ds-head h1 em { color: var(--bean); }
+    .ds-head p { font-size: var(--fs-lead); color: var(--ink-2); max-width: 54ch; margin: 0; }
+    .ds-sec { padding-block: var(--s6); border-top: 1px solid var(--line); }
+    .ds-sec > .wrap > h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom: var(--s4); }
+    .ds-grid { display: grid; gap: var(--s2); grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    .swatch { border-radius: var(--r-m); overflow: hidden; background: var(--cream); box-shadow: 0 0 0 1px var(--line); }
+    .swatch__chip { height: 110px; }
+    .swatch__meta { padding: .75rem .9rem; font-size: .85rem; }
+    .swatch__meta b { display: block; font-weight: 600; }
+    .swatch__meta span { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+    .type-row { display: grid; gap: var(--s2); padding-block: var(--s3); border-bottom: 1px solid var(--line); }
+    .type-row:last-child { border-bottom: 0; }
+    .type-row small { color: var(--ink-2); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+    @media (min-width: 800px) { .type-row { grid-template-columns: 220px 1fr; align-items: baseline; } }
+    .pair { display: grid; gap: var(--s3); grid-template-columns: 1fr; }
+    @media (min-width: 800px) { .pair { grid-template-columns: 1fr 1fr; } }
+    .pair__card { background: var(--cream); border-radius: var(--r-l); padding: var(--s5); }
+    .pair__card .big { font-size: clamp(4rem, 10vw, 8rem); line-height: 1; margin: 0 0 var(--s2); }
+    .pair__card p { color: var(--ink-2); margin: 0; }
+    .space-row { display: flex; align-items: center; gap: var(--s3); padding: .35rem 0; font-size: .85rem; color: var(--ink-2); }
+    .space-row i { display: block; height: 14px; background: var(--bean); border-radius: 3px; }
+    .comp { display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; padding: var(--s4); border-radius: var(--r-l); background: var(--cream); }
+    .comp--dark { background: var(--bean); }
+    .principles { display: grid; gap: var(--s2); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .principle { background: var(--cream); border-radius: var(--r-m); padding: var(--s4); }
+    .principle h3 { margin-bottom: var(--s2); }
+    .principle p { margin: 0; color: var(--ink-2); }
+    .principle .ex { margin-top: var(--s2); font-family: var(--serif); font-style: italic; color: var(--bean); }
+    .circle { display: grid; place-items: center; }
+    .circle svg { width: min(100%, 520px); height: auto; }
+    .circle text { font-family: var(--serif); }
+    .ds-back { display: inline-block; margin-top: var(--s4); }
+  </style>
+</head>
+<body class="no-intro">
+  <div class="concept-bar">
+    <span>Design system · Concept for chi-cafe.de · Draft by Kamran Alavi</span>
+    <a href="index.html">← Back to the homepage concept</a>
+  </div>
+
+  <header class="ds-head wrap">
+    <p class="eyebrow">Visual direction</p>
+    <h1>Stille <em>Energie.</em></h1>
+    <p>Quiet energy. A calm, premium system built on one idea from the brand itself: <em>Regt an, nicht auf</em> — it energises, it never agitates. Every choice below follows from that.</p>
+  </header>
+
+  <section class="ds-sec">
+    <div class="wrap">
+      <h2>Start with why</h2>
+      <div class="circle">
+        <svg viewBox="0 0 520 520" role="img" aria-label="Golden circle: Why, How, What">
+          <circle cx="260" cy="260" r="250" fill="#EDE3D5" />
+          <circle cx="260" cy="260" r="168" fill="#D8C7B0" />
+          <circle cx="260" cy="260" r="88" fill="#5B3A29" />
+          <text x="260" y="252" text-anchor="middle" fill="#FBF8F3" font-size="30" font-style="italic">Why</text>
+          <text x="260" y="280" text-anchor="middle" fill="#FBF8F3" font-size="13" font-family="Figtree">Genuss soll guttun</text>
+          <text x="260" y="128" text-anchor="middle" fill="#2B1F18" font-size="26" font-style="italic">How</text>
+          <text x="260" y="152" text-anchor="middle" fill="#6A5A4F" font-size="13" font-family="Figtree">Coffee + ancient plants · gentle energy</text>
+          <text x="260" y="50" text-anchor="middle" fill="#2B1F18" font-size="24" font-style="italic">What</text>
+          <text x="260" y="72" text-anchor="middle" fill="#6A5A4F" font-size="13" font-family="Figtree">Blends with character</text>
+        </svg>
+      </div>
+      <p style="max-width:60ch;color:var(--ink-2)">The homepage tells the story from the inside out: <b>01 Warum</b> (the founders' belief) → <b>02 Wie</b> (gentle energy, the ingredients) → <b>03 Was</b> (the blends). Purpose, voices and an easy first step follow.</p>
+    </div>
+  </section>
+
+  <section class="ds-sec">
+    <div class="wrap">
+      <h2>Colour</h2>
+      <div class="ds-grid">
+        <div class="swatch"><div class="swatch__chip" style="background:#F5EFE6"></div><div class="swatch__meta"><b>Paper</b><span>#F5EFE6 · base</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#FBF8F3"></div><div class="swatch__meta"><b>Cream</b><span>#FBF8F3 · surfaces</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#EDE3D5"></div><div class="swatch__meta"><b>Oat</b><span>#EDE3D5 · sections</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#D8C7B0"></div><div class="swatch__meta"><b>Sand</b><span>#D8C7B0</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#A8906F"></div><div class="swatch__meta"><b>Clay</b><span>#A8906F · details</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#5B3A29"></div><div class="swatch__meta"><b>Bean</b><span>#5B3A29 · brand</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#2B1F18"></div><div class="swatch__meta"><b>Ink</b><span>#2B1F18 · text</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#7E8C6B"></div><div class="swatch__meta"><b>Sage</b><span>#7E8C6B · sparingly</span></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#9A4A2A"></div><div class="swatch__meta"><b>Reishi</b><span>#9A4A2A · focus</span></div></div>
+      </div>
+      <p style="max-width:60ch;color:var(--ink-2);margin-top:var(--s3)">Built from the existing brand brown (#5B3A29) and the cream of the packaging. Warm neutrals do 90 % of the work; colour is a whisper, not a shout.</p>
+    </div>
+  </section>
+
+  <section class="ds-sec">
+    <div class="wrap">
+      <h2>Typography</h2>
+      <div class="pair">
+        <div class="pair__card">
+          <p class="big" style="font-family:var(--serif);font-weight:300;font-variation-settings:'SOFT' 100">Aa <em style="color:var(--bean)">Aa</em></p>
+          <h3>Fraunces · Light, Soft</h3>
+          <p>Headlines. Warm, calm and premium; the soft axis rounds every terminal. Its italic quietly echoes the Chi-Cafe wordmark.</p>
+        </div>
+        <div class="pair__card">
+          <p class="big" style="font-family:var(--sans)">Aa</p>
+          <h3>Figtree · 400 / 500 / 600</h3>
+          <p>Text and interface. Friendly, open and very legible — on a phone in a pharmacy queue as well as on a large screen.</p>
+        </div>
+      </div>
+      <div style="margin-top:var(--s4)">
+        <div class="type-row"><small>Display · clamp 54–144px</small><span style="font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,6vw,4.6rem);line-height:1;font-variation-settings:'SOFT' 100">Regt an. <em style="color:var(--bean)">Nicht auf.</em></span></div>
+        <div class="type-row"><small>H2 · clamp 36–70px</small><span style="font-family:var(--serif);font-weight:300;font-size:var(--fs-h2);line-height:1.05">Jede Dose <em style="color:var(--bean)">teilt.</em></span></div>
+        <div class="type-row"><small>H3 · 21–26px</small><span style="font-family:var(--serif);font-weight:300;font-size:var(--fs-h3)">Ein gutes Bauchgefühl</span></div>
+        <div class="type-row"><small>Lead · 18–22px</small><span style="font-size:var(--fs-lead);color:var(--ink-2)">Kaffeegenuss mit Reishi, Ginseng und Guarana.</span></div>
+        <div class="type-row"><small>Body · 17px / 1.65</small><span>Schonend geröstete Arabica- und Robusta-Bohnen, ergänzt durch die tropische Guarana-Frucht.</span></div>
+        <div class="type-row"><small>Eyebrow · 14px caps</small><span class="eyebrow" style="margin:0"><span class="eyebrow__num">02</span> Wie es wirkt</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-sec">
+    <div class="wrap">
+      <h2>Space &amp; shape</h2>
+      <div class="space-row"><i style="width:8px"></i>s1 · 8</div>
+      <div class="space-row"><i style="width:16px"></i>s2 · 16</div>
+      <div class="space-row"><i style="width:24px"></i>s3 · 24</div>
+      <div class="space-row"><i style="width:32px"></i>s4 · 32</div>
+      <div class="space-row"><i style="width:48px"></i>s5 · 48</div>
+      <div class="space-row"><i style="width:64px"></i>s6 · 64</div>
+      <div class="space-row"><i style="width:96px"></i>s7 · 96</div>
+      <div class="space-row"><i style="width:144px"></i>s8 · 144</div>
+      <p style="max-width:60ch;color:var(--ink-2);margin-top:var(--s3)">8-point rhythm. Sections breathe with 96–144px of air on desktop. Radii: 12 · 20 · 32 · pill. Lines max ~60 characters.</p>
+    </div>
+  </section>
+
+  <section class="ds-sec">
+    <div class="wrap">
+      <h2>Components</h2>
+      <div class="comp">
+        <a class="btn btn--dark" href="#">Probierpaket bestellen</a>
+        <a class="btn btn--small btn--dark" href="#">Shop</a>
+        <button class="chip">Am Morgen</button>
+        <button class="chip is-on">Cremig &amp; exotisch</button>
+        <button class="arrow">→</button>
+      </div>
+      <div class="comp comp--dark" style="margin-top:var(--s2)">
+        <a class="btn btn--light" href="#">Sorten entdecken</a>
+        <a class="btn btn--ghost-light" href="#">Probierpaket · 3,75 €</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-sec">
+    <div class="wrap">
+      <h2>Voice</h2>
+      <div class="principles">
+        <div class="principle"><h3>Clear before clever</h3><p>One idea per section. One sentence that carries it.</p><p class="ex">„Jede Dose teilt.“</p></div>
+        <div class="principle"><h3>Specific, not superlative</h3><p>Numbers and facts instead of “amazing” and “unique”.</p><p class="ex">„70 % Vitalpilze.“</p></div>
+        <div class="principle"><h3>Warm, calm, adult</h3><p>Formal <i>Sie</i>, short sentences, no exclamation marks.</p><p class="ex">„Schenken Sie sich zehn Sekunden.“</p></div>
+        <div class="principle"><h3>Promise less, show more</h3><p>Health statements stay within the brand's existing, footnoted claims.</p><p class="ex">„… wirkt sanfter und länger.²“</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-sec">
+    <div class="wrap">
+      <h2>Motion</h2>
+      <div class="principles">
+        <div class="principle"><h3>Slow</h3><p>1.2s reveals, long eases. Nothing snaps.</p></div>
+        <div class="principle"><h3>Soft</h3><p>Fades and gentle rises — like steam, never like a bounce.</p></div>
+        <div class="principle"><h3>Rare</h3><p>Motion marks a moment; it is not decoration. "Reduce motion" is always respected.</p></div>
+      </div>
+      <a class="btn btn--dark ds-back" href="index.html">← Back to the homepage</a>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="wrap"><div class="footer__notes"><p>Design concept – not the official Chi-Cafe website.</p></div></div></footer>
+</body>
+</html>
