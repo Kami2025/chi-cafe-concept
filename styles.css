@@ -48,12 +48,14 @@ body {
   overflow-x: hidden;
 }
 img { display: block; max-width: 100%; }
+[hidden] { display: none !important; }
 a { color: inherit; }
 button { font: inherit; color: inherit; }
 sup { font-size: .6em; line-height: 0; }
 :focus-visible { outline: 2px solid var(--reishi); outline-offset: 3px; border-radius: 4px; }
 
 .wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+section[id] { scroll-margin-top: 64px; }
 .section { padding-block: clamp(var(--s6), 12vw, var(--s8)); }
 
 /* ---------- type ---------- */

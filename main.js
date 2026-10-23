@@ -137,7 +137,18 @@
       if (entry.target.classList.contains('counter')) countUp();
     });
   }, { threshold: 0.18 });
-  document.querySelectorAll('.reveal').forEach(el => revealer.observe(el));
+  // ?static shows everything at once, ?only=<class> isolates one section (used for proposal screenshots)
+  const only = params.get('only');
+  if (only) {
+    document.querySelectorAll('main > section, .footer, .concept-bar').forEach(el => { el.hidden = !el.classList.contains(only); });
+  }
+  if (params.has('static')) {
+    document.querySelectorAll('.reveal, .curve').forEach(el => el.classList.add('is-in'));
+    const c = document.getElementById('counter');
+    c.textContent = Number(c.dataset.target).toLocaleString('de-DE');
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => revealer.observe(el));
+  }
 
   /* ---------- ingredients: sticky image follows the text ---------- */
   const ingImgs = [...document.querySelectorAll('.ingredients__frame img')];
